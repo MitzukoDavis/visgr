@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FORMULARIO DE INGRESO DE PDFS</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">INGRESE SUS DATOS</div>
+            <div class="row">
+                <div class="col-md-6">OFICINA</div>
+                <input class="col-md-5" type="text" placeholder="Busque su Oficina">
+                <span class="col-md-1 glyphicon glyphicon-search" aria-hidden="true"></span>
+            </div>
+            <div class="row">
+                <div class="col-md-3">MES</div>
+                <select class="col-md-2" name="mes">
+                    <option value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+                <div class="col-md-1"></div>
+                <div class="col-md-3">ANO</div>
+                <select class="col-md-2" id="year" name="year">
+                  <script>
+                      var myDate = new Date();
+                      var year = myDate.getFullYear();
+                      for (var i = 2016; i > year - 20; i--) {
+                          document.write('<option value="' + i + '">' + i + '</option>');
+                      }
+                  </script>
+                </select>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">META</div>
+                <input class="col-md-5" type="text" placeholder="Busque su Oficina">
+                <span class="col-md-1 glyphicon glyphicon-search" aria-hidden="true"></span>
+            </div>
+            <div class="row">
+                <div class="col-md-6">RESPONSABLE</div>
+                <input class="col-md-5" type="text" placeholder="Busque su Oficina">
+                <span class="col-md-1 glyphicon glyphicon-search" aria-hidden="true"></span>
+            </div>
+            <div class="row">
+            <label class="col-md-6" for="exampleInputFile">Suba su archivo en formato PDF</label>
+            <input type="file" id="exampleInputFile">
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</html>
